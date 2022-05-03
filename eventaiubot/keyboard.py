@@ -3,5 +3,6 @@ from aiogram.types import ReplyKeyboardRemove, \
     InlineKeyboardMarkup, InlineKeyboardButton
 
 button = KeyboardButton('/event')
+button2 = KeyboardButton('/help')
 
-event_kb = ReplyKeyboardMarkup(resize_keyboard=True).add(button)
+event_kb = ReplyKeyboardMarkup(resize_keyboard=True).add(button, button2)
