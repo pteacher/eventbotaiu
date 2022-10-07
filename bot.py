@@ -1,5 +1,5 @@
 from aiogram import executor
-from dispatcher import dp
+from dispatcher import dp, bot
 from aiogram.utils.executor import start_webhook
 import os
 import handlers
