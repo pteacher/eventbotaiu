@@ -1,11 +1,13 @@
 from aiogram import executor
 from dispatcher import dp
+import os
 import handlers
 
 from db import BotDB 
 BotDB = BotDB('event.db')
 
 HEROKU_APP_NAME = os.getenv('HEROKU_APP_NAME')
+TOKEN = os.getenv('BOT_TOKEN')
 
 # webhook settings
 WEBHOOK_HOST = f'https://{HEROKU_APP_NAME}.herokuapp.com'
