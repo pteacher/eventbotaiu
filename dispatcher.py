@@ -9,7 +9,7 @@ if not config.BOT_TOKEN:
     exit("No token provided")
 
 # init
-bot = Bot(token=config.BOT_TOKEN, parse_mode="HTML")
+bot = Bot(token=os.getenv('BOT_TOKEN'), parse_mode="HTML")
 
 dp = Dispatcher(bot, storage=MemoryStorage())
 dp.middleware.setup(LoggingMiddleware())
