@@ -3,6 +3,7 @@ from dispatcher import dp
 from aiogram.utils.executor import start_webhook
 import os
 import handlers
+import logging
 
 from db import BotDB 
 BotDB = BotDB('event.db')
@@ -28,6 +29,7 @@ async def on_shutdown(dispatcher):
 
 if __name__ == "__main__":
     # executor.start_polling(dp, skip_updates=True)
+    logging.basicConfig(level=logging.INFO)
     start_webhook(
         dispatcher=dp,
         webhook_path=WEBHOOK_PATH,
